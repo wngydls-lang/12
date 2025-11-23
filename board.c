@@ -5,8 +5,8 @@ int board_stepShark(void);
 int board_getBoardCoin(int pos);
 void board_printBoardStatus(void);
 
-#define N_BOARD                   20
 
+#include "board.h"
 #define N_COINPOS                 12
 #define MAX_COIN                  4
 
