@@ -62,6 +62,7 @@ void board_initBoard(void)
             if (board_coin[coinpos] == 0)
             { 
                board_coin[coinpos] = rand()%MAX_COIN + 1;
+               flag_allocated = 1;
             }
         } while(flag_allocated == 0);      
     }
