@@ -30,6 +30,13 @@ printf("O");
 printf("|\n");
 printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
+printf("~~~~~~~~~~~~~~~BOARD COIN ~~~~~~~~~~~~~~~~~~\n");
+for (i = 0; i<N_BOARD; i++)
+{
+    printf("|%i", board_coin[i]);
+}
+printf("|\n");
+printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 }
 
 int board_getBoardStatus(int pos)
@@ -39,7 +46,9 @@ int board_getBoardStatus(int pos)
 
 int board_getBoardCoin(int pos)
 {
-    return board_coin[pos];
+    int coin = board_coin[pos];
+    board_coin[pos] = 0;
+    return coin;
 }
 
 void board_initBoard(void)
